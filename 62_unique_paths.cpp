@@ -8,6 +8,16 @@ How many possible unique paths are there?
 #include<iostream>
 using namespace std;
 
+/* Recursive solution */
+int uniquePaths_recursive (int m, int n) {
+    if (m == 1 || n == 1) {
+        return 1;    
+    }        
+    else {
+        return uniquePaths_recursive(m-1, n) + uniquePaths_recursive(m, n-1);    
+    }
+}
+
 /* Dynamic programmign solution */
 int uniquePaths(int m, int n) {
     int memo[m][n];
@@ -40,4 +50,5 @@ int main() {
     int m, n;
     cin >> m >> n;
     cout << uniquePaths(m, n) << endl;    
+    cout << uniquePaths_recursive(m, n) << endl;    
 }
