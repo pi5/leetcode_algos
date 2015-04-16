@@ -59,8 +59,6 @@ vector<vector<int> > subsets(vector<int> &S) {
 }
 
 
-
-
 void print_results(vector<vector<int> > &v) {
     
     for (int i = 0; i < v.size(); i++) {
@@ -77,11 +75,10 @@ void print_results(vector<vector<int> > &v) {
 
 int main() {
     
-    int arr[] = {1,2,3};
+    int arr[] = {1,2,2};
     int len = sizeof(arr)/sizeof(arr[0]);
 
     vector<int> v(arr, arr + len);
-
     vector<vector<int> > results = subsets(v);
     
     print_results(results); 
