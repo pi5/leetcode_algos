@@ -31,7 +31,7 @@ TreeNode *buildTree_util(vector<int> &preorder, vector<int> &inorder, int &prein
    
     /* Using a map instead of find method has good speed benefits */ 
     int root_index = find(inorder, rootval);
-    //cout << "------" << rootval << "  " << root_index << endl;
+    // cout << "------" << rootval << "  " << root_index << endl;
     root->left = buildTree_util(preorder, inorder, preindex, in_start, root_index - 1);
     root->right = buildTree_util(preorder, inorder, preindex, root_index + 1, in_end);
 
