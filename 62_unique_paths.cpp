@@ -18,7 +18,7 @@ int uniquePaths_recursive (int m, int n) {
     }
 }
 
-/* Dynamic programmign solution */
+/* Dynamic programming solution */
 int uniquePaths(int m, int n) {
     int memo[m][n];
     memset(memo, 0, sizeof(memo));
