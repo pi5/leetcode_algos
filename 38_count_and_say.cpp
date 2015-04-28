@@ -13,7 +13,7 @@ string countAndSay(int n) {
         while(curr < num.length()) {
             char c = num[curr];
             int count = 0;
-            while(num[curr+count] == c && curr+count < num.length())
+            while(curr+count < num.length() && num[curr+count] == c)
                  count++;
             next += (to_string(count) + c);
             curr = curr+count;
